@@ -5,7 +5,7 @@ _Нет полноценной версии_
 
 
 ## Скриншоты:
-![Test_Preview](./historygram/assets/1.png)
+![Test_Preview](./Historygram/assets/1.png)
 
 ## Видео: 
-![Video](./historygram/assets/1.gif)
+![Video](./Historygram/assets/1.gif)
