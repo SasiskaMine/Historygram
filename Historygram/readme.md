@@ -3,4 +3,9 @@
 
 _Нет полноценной версии_
 
-![Test_Preview](./screenshots/1.png)
+
+## Скриншоты:
+![Test_Preview](./assets/1.png)
+
+## Видео: 
+![Video](./assets/1.gif)
