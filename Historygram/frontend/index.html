@@ -1,52 +1,45 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Historygram</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
-  <script type="importmap">
-  {
-    "imports": {
-      "@material/web/": "https://esm.run/@material/web/"
-    }
-  }
   
-</script>
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fef7ff;
+    }
+  </style>
 </head>
 
 <body>
   <div id="header"></div>
   <div id="app"></div>
   <div id="menu"></div>
+
   <script type="module" src="/src/main.ts"></script>
   <script type="module" src="/src/header.ts"></script>
   <script type="module" src="/src/menu.ts"></script>
 
+  <script>
+    const menuEl = document.querySelector('#menu');
+    if (menuEl) {
+      menuEl.onchange = ({ target: t }) => {
+        if (!t.matches('.bottom-tabs')) return;
+        
+        const screen1 = document.querySelector('#Stories');
+        const screen2 = document.querySelector('#Create');
+        const screen3 = document.querySelector('#account');
+
+        [screen1, screen2, screen3].forEach((s, i) => {
+          if (s) s.style.display = i === t.activeTabIndex ? 'block' : 'none';
+        });
+      };
+    }
+  </script>
 </body>
-<style>
-  body {
-    background-color: #fef7ff;
-  }
-</style>
-
-<script>
-  menu.onchange = ({ target: t }) => {
-    if (!t.matches('.bottom-tabs')) return;
-    
-    const screen1 = document.querySelector('#Stories');
-    const screen2 = document.querySelector('#Create');
-    const screen3 = document.querySelector('#Settings');
-
-    [screen1, screen2, screen3].forEach((s, i) => {
-      if (s) s.style.display = i === t.activeTabIndex ? 'block' : 'none';
-    });
-  };
-</script>
-
-
 
 </html>

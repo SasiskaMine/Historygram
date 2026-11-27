@@ -19,8 +19,8 @@ if (typescaleStyles.styleSheet) {
       Создать
     </md-primary-tab>
     <md-primary-tab>
-      <md-icon slot="icon">settings</md-icon>
-      Настройки
+      <md-icon slot="icon">account_circle</md-icon>
+      Аккаунт
     </md-primary-tab>
   </md-tabs>
 </template>
